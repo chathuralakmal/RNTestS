@@ -20,7 +20,8 @@ export function* requestPosts(action) {
     yield put(appActions.hideFullScreenLoader());
   } catch (error) {
     yield put(appActions.hideFullScreenLoader());
-    action.payload.callBack(response.data);
+    console.log("ERROR ",error)
+    action.payload.callBack([]);
   }
 }
 
@@ -38,6 +39,7 @@ export function* requestNews(action) {
     // yield put(appActions.hideFullScreenLoader());
   } catch (error) {
     // yield put(appActions.hideFullScreenLoader());
-    action.payload.callBack(response.data);
+    console.log("ERROR ",error)
+    action.payload.callBack([]);
   }
 }
